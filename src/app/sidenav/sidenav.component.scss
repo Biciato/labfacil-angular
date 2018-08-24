@@ -1,0 +1,92 @@
+.sidenav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 3.5%;
+    background: #eee;
+
+    .mat-sidenav {
+        width: 250px;
+        background-color: #0780c6;
+        box-shadow: 0 10px 10px 4px rgba(0,0,0,.40);
+
+        
+    }
+
+    ul {
+        list-style-type: none;
+        margin-top: 35%;
+        padding: 0;
+    }
+
+    .menuIn:hover span {
+        color: darkorange;
+    }
+  }
+
+  li {
+    margin-bottom: 5%;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: color 1000ms;
+    transition: color 1000ms;
+
+    div {
+        display: none;
+    }
+}    
+
+.menuOut:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #012738;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+}
+
+.menuOut:hover:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+     
+}
+
+.menuOut:hover div {
+    display: inline-block;
+
+    ul {
+        margin-top: 20px;
+        margin-left: 70px;
+        list-style-type: square;
+        color: darkorange;
+    }
+}
+
+span {
+    color: whitesmoke;
+    padding: 5px;
+    font-family: sans-serif;
+    cursor: pointer;
+
+    mat-icon {
+        color: rgb(244, 119, 66);
+        position: relative;
+        top: 5px;
+        left: -5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

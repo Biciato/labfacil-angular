@@ -6,19 +6,35 @@
   background-repeat: no-repeat;
   background-size: 50% 100%;
   overflow: auto;
+
+  img {
+    width: 11%;
+    margin-left: 68%;
+    margin-top: 5%;
+  }
 }
 
 .mat-card-title {
   width: 92%;
-  height: 27%;
+  height: 25%;
   margin-left: 4%;
   bottom: 78%;
-  background-color: #034f84;
-  color: #deeaee;
+  background-color: #0780c6;
+  color: whitesmoke;
+  font-weight: bold;
   position: absolute;
   line-height: 66px;
+  box-shadow: 5px 6px 20px 3px rgba(189,172,189,0.76);
+  border-radius: 10px;
+
+  span {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+  }
 }
 
+ 
 .mat-card-content {
   padding-top: 20%;
 }
@@ -27,18 +43,14 @@
   padding: 4% 0 4% 15%;
   font-size: 100%;
   width: 45%;
+  background-color: orangered !important;
+  cursor: pointer;
 }
 
 .mat-icon {
   margin-right: 4%;
   margin-right: 4%;
   vertical-align: middle;
-}
-
-.mat-card-title span {
-  vertical-align: middle;
-  display: inline-block;
-  line-height: normal;
 }
 
 .mat-form-field {
@@ -53,5 +65,5 @@
   text-align: center;
   justify-content: center;
   margin-left: 66%;
-  margin-top: 10%;
+  margin-top: 2%;
 }

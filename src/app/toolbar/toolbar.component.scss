@@ -1,0 +1,40 @@
+.mat-toolbar {
+    box-shadow: 0 10px 10px 4px rgba(0,0,0,.40);
+    background:whitesmoke;
+    order: 1;
+    outline-width: 0;
+
+    .mat-icon {
+        color: orangered;
+        position: relative;
+        top: 5px;
+        left: -5px;
+        margin-left: 5px;
+    }
+    span {
+        color: #0780c6;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    span:nth-child(2) {
+        flex: 1 1 auto;
+    }
+
+    img {
+        width: 12%;
+        margin-left: 1%;
+        margin-top: 1%;
+    }
+
+    span:hover {
+        border: 1px outset orangered;
+        border-radius: 21px;
+        background-color: silver;
+    }
+
+    span:first-child:hover {
+        border: none;
+        cursor: auto; 
+    }
+}

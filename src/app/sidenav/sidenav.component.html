@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav">
+  <mat-sidenav mode="side" opened>
+    <ul>
+      <li *ngFor="let menuButton of sidenavMenuButtons; let e = index" class="menuOut">
+        <span><mat-icon>{{ return_icons_names(e) }}</mat-icon>{{ menuButton }}</span>
+        <div [ngSwitch]="menuButton">
+          <ul *ngSwitchCase="'Rotina Diária'" id="rd">
+            <li *ngFor="let insideMenuButton of  sidenavRDButtons" class="menuIn"><span>{{ insideMenuButton }}</span></li>
+          </ul>
+          <ul *ngSwitchCase="'Cadatro'" id="cad">
+            <li *ngFor="let insideMenuButton of  sidenavCadButtons" class="menuIn"><span>{{ insideMenuButton }}</span></li>
+          </ul>
+          <ul *ngSwitchCase="'Faturamento'" id="fat">
+            <li *ngFor="let insideMenuButton of  sidenavFatButtons" class="menuIn"><span>{{ insideMenuButton }}</span></li>
+          </ul>
+          <ul *ngSwitchCase="'Relatórios'" id="rel"> 
+            <li *ngFor="let insideMenuButton of  sidenavRelButtons" class="menuIn"><span>{{ insideMenuButton }}</span></li>
+          </ul>
+          <ul *ngSwitchCase="'Administrativo'" id="adm">
+            <li *ngFor="let insideMenuButton of  sidenavADMButtons" class="menuIn"><span>{{ insideMenuButton }}</span></li>
+          </ul>
+          <div *ngSwitchDefault></div>
+        </div>
+      </li>
+    </ul>  
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-content-tabset>
+      <app-content-tab *ngFor="let tab of tabs" [title]="tab.title"></app-content-tab>
+    </app-content-tabset>
+  </mat-sidenav-content>
+</mat-sidenav-container>
