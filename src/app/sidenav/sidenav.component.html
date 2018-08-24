@@ -26,7 +26,14 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <app-content-tabset>
-      <app-content-tab *ngFor="let tab of tabs" [title]="tab.title"></app-content-tab>
+      <app-content-tab *ngFor="let tab of tabs" [title]="tab.title">
+        <app-unidades style="width: 100%;" *ngIf="tab.title == 'Unidades'"></app-unidades>
+        <app-pc *ngIf="tab.title == 'Postos de Coleta'"></app-pc>
+        <app-faturamento *ngIf="tab.title == 'Faturamento'"></app-faturamento>
+        <app-usuarios *ngIf="tab.title == 'Usuários'"></app-usuarios>
+        <app-horarios *ngIf="tab.title == 'Horários'"></app-horarios>
+        <app-documentos *ngIf="tab.title == 'Documentos'"></app-documentos>
+      </app-content-tab>
     </app-content-tabset>
   </mat-sidenav-content>
 </mat-sidenav-container>

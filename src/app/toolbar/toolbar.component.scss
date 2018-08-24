@@ -35,6 +35,10 @@
 
     span:first-child:hover {
         border: none;
-        cursor: auto; 
+        border-radius: none;
+        cursor: auto;
+        padding-top: 0;
+        padding-bottom: 0; 
+        background-color: whitesmoke;
     }
 }

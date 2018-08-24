@@ -10,6 +10,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentTabComponent } from './content-tab/content-tab.component';
+import { ContentTabsetComponent } from './content-tabset/content-tabset.component';
+import { UnidadesComponent } from './unidades/unidades.component';
+import { PCComponent } from './pc/pc.component';
+import { FaturamentoComponent } from './faturamento/faturamento.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { DocumentosComponent } from './documentos/documentos.component';
+import { HorariosComponent } from './horarios/horarios.component';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -19,10 +26,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTabsModule } from '@angular/material/tabs';
-import { ContentTabsetComponent } from './content-tabset/content-tabset.component';
-
-
+import { MatTableModule } from '@angular/material/table';
 
 const routes: Routes = [
   // basic routes
@@ -39,7 +43,13 @@ const routes: Routes = [
     SidenavComponent,
     ToolbarComponent,
     ContentTabComponent,
-    ContentTabsetComponent
+    ContentTabsetComponent,
+    UnidadesComponent,
+    PCComponent,
+    FaturamentoComponent,
+    UsuariosComponent,
+    DocumentosComponent,
+    HorariosComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +65,7 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
-    MatTabsModule
+    MatTableModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
